@@ -13,9 +13,12 @@
 html,
 body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  /* padding: 0 4px; */
 }
 body {
   font-family: "Poppins", sans-serif;
+  position: relative;
 }
 code {
   font-family: "Poppins", sans-serif;
