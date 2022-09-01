@@ -1,15 +1,13 @@
 import React from 'react';
-import Button from '../shared/Button';
-import RegisterForm from './RegisterForm';
+import heroBG from '../../assets/hero-bg.png';
 
 const Banner = () => {
-    const handleClick = () => {
-        alert("Something!");
+    const herobg = {
+        background: `url(${heroBG})`,
+        backgroundSize: "cover"
     }
     return (
-        <div>
-            <RegisterForm />
-            <Button onClick={handleClick} name="This button" />
+        <div className='h-[150px] sm:h-[300px] md:h-[400px] lg:h-[600px]' style={herobg}>
         </div>
     );
 };
