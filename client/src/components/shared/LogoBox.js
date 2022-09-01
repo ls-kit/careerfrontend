@@ -1,0 +1,12 @@
+import React from 'react';
+import logo from '../../assets/Logo Large.png';
+
+const LogoBox = () => {
+    return (
+        <div className='shadow-lg shadow-gray-500 p-4'>
+            <img src={logo} alt="Logo" />
+        </div>
+    );
+};
+
+export default LogoBox;
