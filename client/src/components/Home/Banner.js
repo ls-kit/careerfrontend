@@ -5,10 +5,11 @@ const Banner = () => {
     const herobg = {
         background: `url(${heroBG})`,
         height: '550px',
-        backgroundSize: "cover"
+        backgroundSize: "cover",
+        
     }
     return (
-        <div style={herobg}>
+        <div style={herobg} className="mb-5">
         </div>
     );
 };
