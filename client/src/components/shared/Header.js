@@ -58,7 +58,7 @@ const Header = () => {
     return (
         <div>
             {/* Big Screen */}
-            <div className={`hidden lg:block bg-black py-2 ${stickyMenu ? "fixed w-full top-0 transition-all duration-500" : ""}`}>
+            <div className={`z-50 hidden lg:block bg-black py-2 ${stickyMenu ? "fixed w-full top-0 transition-all duration-500" : ""}`}>
                 <div className="container mx-auto">
                     <div className="flex items-center justify-between">
                         <div>
