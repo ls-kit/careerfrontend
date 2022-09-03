@@ -4,6 +4,7 @@ import Banner from '../components/Home/Banner';
 import OurAdvisor from '../components/Home/OurAdvisor';
 import Footer from '../components/shared/Footer';
 import Header from '../components/shared/Header';
+import LogoBox from '../components/shared/LogoBox';
 import TopHeader from '../components/shared/TopHeader';
 
 const Home = () => {

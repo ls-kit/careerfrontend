@@ -52,6 +52,9 @@ const Footer = () => {
                                     <div className='flex items-center justify-center bg-white text-green-600 rounded-md w-8 h-8 mr-3 text-2xl shadow-md'>
                                         <ImLocation />
                                     </div>
+                                    <ul>
+                                        <li className='text-white'>135/5, North Mugda, Gazi bhaban, Dhaka-1214</li>
+                                    </ul>
                                 </div>
                                 <div className='flex items-center sm:pt-3'>
                                     <div className='flex items-center justify-center bg-white text-green-600 rounded-md w-8 h-8 mr-3 text-2xl shadow-md'>
@@ -68,6 +71,9 @@ const Footer = () => {
                                     <div className='flex items-center justify-center bg-white text-green-600 rounded-md min-w-[33px] h-8 mr-3 text-2xl shadow-md'>
                                         <AiOutlineMail />
                                     </div>
+                                    <ul>
+                                        <li className='text-white'>bangladeshcareerolympiad@gmail.com</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

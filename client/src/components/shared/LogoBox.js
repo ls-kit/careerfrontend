@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/Logo Large.png';
+import logo from '../../assets/Logo.png';
 
 const LogoBox = () => {
     return (
