@@ -72,11 +72,11 @@ const CountDown = () => {
           </div>
         </div>
       </div>
-      <div className="ml-6">
+      {/* <div className="ml-6">
         <button className="bg-green-700 border-2 border-green-800 text-md font-medium w-full h-12 block shadow-md rounded-md text-white uppercase">
           Registration Now
         </button>
-      </div>
+      </div> */}
     </div>
     );
 };

@@ -14,7 +14,7 @@ const Home = () => {
             <Header />
             <Banner />
 
-             <CountDown />
+             {/* <CountDown /> */}
             {/* <CountUp />  */}
            <Aboutsection/>
             <OurAdvisor/>
