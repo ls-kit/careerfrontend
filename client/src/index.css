@@ -28,3 +28,25 @@ code {
 .container{
   max-width: 1120px !important;
 }
+
+.ls_box-border {
+  border-left: 5px solid red;
+}
+.ls_box-border:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 5px;
+  background: red;
+}
+.ls_box-border:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 5px;
+  background: red;
+}

@@ -4,10 +4,11 @@ import Banner from '../components/Home/Banner';
 import OurAdvisor from '../components/Home/OurAdvisor';
 import SimpleSlider from '../components/Home/Slider';
 import CourseSlider from '../components/Home/CourseSlider';
+import OlympiadSection from '../components/Home/OlympiadSection';
 import Footer from '../components/shared/Footer';
 import Header from '../components/shared/Header';
 import TopHeader from '../components/shared/TopHeader';
-import CourseBox from '../components/shared/CourseBox';
+import OlympiadBox from '../components/shared/OlympiadBox';
 
 const Home = () => {
     return (
@@ -19,12 +20,11 @@ const Home = () => {
              {/* <CountDown /> */}
             {/* <CountUp />  */}
            <Aboutsection/>
+           <OlympiadSection />
             <CourseSlider />
             <SimpleSlider />
             <OurAdvisor/>
             <Footer />
-
-            <CourseBox />
         </div>
     );
 };
