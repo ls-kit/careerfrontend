@@ -8,6 +8,7 @@ import Footer from '../components/shared/Footer';
 import Header from '../components/shared/Header';
 import TopHeader from '../components/shared/TopHeader';
 import OlympiadSegment from '../components/Home/OlympiadSegment';
+import OlympiadRound from '../components/Home/OlympiadRound.js';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
             {/* <CountUp />  */}
             <Aboutsection/>
             <OlympiadSegment />
+            <OlympiadRound />
             <CourseSlider />
             <SimpleSlider />
             <OurAdvisor/>
