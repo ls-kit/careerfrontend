@@ -70,7 +70,7 @@ const Header = () => {
                         </div>
                         <div>
                             <button className='bg-red-600 py-2 px-4 font-medium text-sm text-white rounded-sm'>Registration</button>
-                            <button className='bg-green-500 py-2 px-4 font-medium text-white text-sm rounded-sm ml-3'>Login</button>
+                            <Link className='bg-green-500 py-2 px-4 font-medium text-white text-sm rounded-sm ml-3' to="/login">Login</Link>
                         </div>
                     </div>
                 </div>
