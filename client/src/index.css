@@ -33,6 +33,7 @@ code {
   --color6 : #0474C8;
   --color7 : #FA4C03;
   --color8 : #C79300;
+  --color9 : #5A4E9B;
 }
 
 .container{
@@ -197,4 +198,22 @@ code {
   left: 50px;
   font-size: 30px;
   color: #fff;
+}
+.ls_bdr-head {
+	background: rgb(7, 152, 57) none repeat scroll 0% 0%;
+	outline: 4px solid rgb(7, 152, 57);
+	border: 6px solid #fff;
+}
+.ls_bdr-secondary {
+	border: 2px solid transparent;
+	padding: 10px;
+}
+.ls_bdr-secondary:first-child {
+  border-color: var(--color4);
+}
+.ls_bdr-secondary:nth-child(2) {
+  border-color: var(--color5);
+}
+.ls_bdr-secondary:nth-child(3) {
+  border-color: var(--color9);
 }

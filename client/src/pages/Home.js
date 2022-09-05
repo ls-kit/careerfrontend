@@ -9,6 +9,7 @@ import Header from '../components/shared/Header';
 import TopHeader from '../components/shared/TopHeader';
 import OlympiadSegment from '../components/Home/OlympiadSegment';
 import OlympiadRound from '../components/Home/OlympiadRound.js';
+import OlympiadCategories from '../components/Home/OlympiadCategories';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
             {/* <CountDown /> */}
             {/* <CountUp />  */}
             <Aboutsection/>
+            <OlympiadCategories />
             <OlympiadSegment />
             <OlympiadRound />
             <CourseSlider />
