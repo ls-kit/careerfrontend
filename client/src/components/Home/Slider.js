@@ -1,28 +1,60 @@
-import React from 'react';
+import React from "react";
+import { useState } from "react";
+import VisibilitySensor from "react-visibility-sensor";
 import Slider from "react-slick";
-import slider1 from '../../assets/slider-1.jpg';
-import slider2 from '../../assets/slider-2.jpg';
 
-const SimpleSlider = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
-    return (
-        <div className="my-20">
-            <Slider {...settings}>
-            <div>
-                <img src={slider1} alt="Logo" />
-            </div>
-            <div>
-                <img src={slider2} alt="Logo" />
-            </div>
-            </Slider>
-        </div>
-    );
+function OurAdvisor() {
+  const images = [
+    {
+      imageurl: "https://i.ibb.co/nw8Y311/slider-1.jpg",
+    },
+    {
+      imageurl: "https://i.ibb.co/mBXFJh3/slider-2.jpg",
+    },
+  ];
+  const [imagesShownArray, setImagesShownArray] = useState(
+    Array(images.length).fill(false)
+  );
+
+  const imageVisibleChange = (index, isVisible) => {
+    if (isVisible) {
+      setImagesShownArray((currentImagesShownArray) => {
+        currentImagesShownArray[index] = true;
+        return [...currentImagesShownArray];
+      });
     }
+  };
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false
+};
+  return (
+    <div className="mb-20">
+        <Slider {...settings}>
+          {images &&
+            images.map((advisor) => (
+              <VisibilitySensor>
+                <GridGalleryCard
+                  imageUrl={advisor.imageurl}
+                />
+              </VisibilitySensor>
+            ))}
+        </Slider>
+    </div>
+  );
+}
 
-export default SimpleSlider;
+function GridGalleryCard({imageUrl}) {
+  
+  return (
+    <div>
+      <img src={imageUrl} alt="banner" className="w-full" />
+    </div>
+  );
+}
+
+export default OurAdvisor;
