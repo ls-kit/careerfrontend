@@ -29,6 +29,7 @@ code {
   --color2 : #E6460E;
   --color3 : #136793;
   --color4 : #9303AA;
+  --color5 : #F30206;
 }
 
 .container{
@@ -40,7 +41,7 @@ code {
 .ls_bar::after, .ls_bar::before {
 	content: '';
 	position: absolute;
-	background: #F30206;
+	background: var(--color5);
 	width: 12px;
 	height: 47px;
 	transform: translateY(-50%);
@@ -111,4 +112,15 @@ code {
 .ls_box-border:nth-child(4):after,
 .ls_box-border:nth-child(4):before {
   background: var(--color4);
+}
+
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+	color: var(--color5) !important;
+	transform: translateX(-31px);
+	background: #fff;
+  z-index: 999999  !important;
+}
+.slick-arrow.slick-prev {
+	transform: translateX(32px);
 }
