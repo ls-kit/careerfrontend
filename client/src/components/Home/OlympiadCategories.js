@@ -23,9 +23,13 @@ function OlympiadCategories() {
   
   return (
     <div className="container mx-auto px-3 py-20">
-      <div className="text-center">
-        <h2 className="text-3xl font-medium flex-auto my-5 inline-block px-5 py-3 text-white ls_bdr-head" style={{background:"#079839"}}>
+      <div className="text-center mb-6">
+        <h2 className="text-3xl font-medium flex-auto my-5 inline-block px-5 py-3 text-white ls_bdr-head relative" style={{background:"#079839"}}>
           Olympiad Categories
+
+          <span className="dotted"></span>
+          <span className="dotted"></span>
+          <span className="dotted"></span>
         </h2>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-2 ">
@@ -53,6 +57,7 @@ function OlympiadCard({name, category, instituteName}) {
             <p>{category}</p>
             <p>{instituteName}</p>
         </div>
+        <span className="dotted2"></span>
     </div>
   );
 }
