@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 
 const CountDown = () => {
   var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
@@ -6,7 +6,7 @@ const CountDown = () => {
   const [hours, setHour] = useState(0);
   const [minutes, setMinute] = useState(0);
   const [seconds, setSecond] = useState(0);
-  const mainTime = setInterval(function () {
+  setInterval(function () {
     const now = new Date().getTime();
     const diff = countDownDate - now;
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -78,7 +78,7 @@ const CountDown = () => {
         </button>
       </div> */}
     </div>
-    );
+  );
 };
 
 export default CountDown;

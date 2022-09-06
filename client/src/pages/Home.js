@@ -17,8 +17,6 @@ const Home = () => {
             <TopHeader />
             <Header />
             <Banner />
-            {/* <CountDown /> */}
-            {/* <CountUp />  */}
             <Aboutsection/>
             <OlympiadCategories />
             <OlympiadSegment />
