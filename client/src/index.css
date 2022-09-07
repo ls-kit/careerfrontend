@@ -323,3 +323,10 @@ code {
 .dotted:nth-child(3):after {
 	background: var(--color9);
 }
+
+@media screen and (max-width : 767px) {
+  .dotted,
+  .dotted2 {
+    display: none;
+  }
+}
