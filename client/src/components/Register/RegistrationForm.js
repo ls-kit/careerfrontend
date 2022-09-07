@@ -133,7 +133,7 @@ function RegistrationForm() {
           />
         </div>
         {/* 2 column start here  */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-0">
+        <div className="grid grid-cols-1 md:grid-cols-2  text-slate-600 gap-x-2 gap-y-0">
           <div>
             <input
               type="phone"
@@ -218,12 +218,7 @@ function RegistrationForm() {
         </div>
         <div className="grid grid-cols-1  item-left  mt-4 gap-1">
           {/* error */}
-          <div className="w-100 text-red-800 uppercase">
-            {
-            err?err:""
-            }
-            
-          </div>
+          <div className="w-100 text-red-800 uppercase">{err ? err : ""}</div>
 
           <div className="w-100">
             <input
@@ -237,7 +232,8 @@ function RegistrationForm() {
               for="link-checkbox"
               className="ml-2 text-sm dark:text-gray-300"
             >
-              I agree to the <span className="text-blue-400">Terms & Conditions</span>
+              I agree to the{" "}
+              <span className="text-blue-400">Terms & Conditions</span>
             </label>
           </div>
         </div>
