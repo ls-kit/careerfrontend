@@ -12,7 +12,7 @@ const TopHeader = () => {
                         <img src={headerLogo} alt="" />
                     </div>
                     {/* Header Searchbar */}
-                    <div className='flex items-center justify-end w-full'>
+                    <div className=' hidden lg:flex items-center justify-end w-full'>
                         <div className='rounded-md overflow-hidden flex items-center w-full max-w-xs py-1 px-2 border border-gray-400 shadow-sm shadow-green-600'>
                             <input type="search" className='w-full block outline-none border-none' placeholder='Search Here' />
                             <button className='text-gray-700 text-xl'><BiSearch /></button>

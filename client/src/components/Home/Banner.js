@@ -4,12 +4,10 @@ import heroBG from '../../assets/hero-bg.png';
 const Banner = () => {
     const herobg = {
         background: `url(${heroBG})`,
-        height: '550px',
-        backgroundSize: "cover",
-        
+        backgroundSize: "cover"
     }
     return (
-        <div style={herobg} className="mb-5">
+        <div className='h-[150px] sm:h-[300px] md:h-[400px] lg:h-[600px]' style={herobg}>
         </div>
     );
 };
