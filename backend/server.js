@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 5000
@@ -8,7 +9,7 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const corsOptions = require("./config/corsOptions");
 
-
+console.log(process.env.MONGO_SERVER_URI);
 // Application use Middleware
 app.use(logger);
 app.use(cors(corsOptions));
@@ -16,12 +17,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "/public")));
 
-
 // Application - root Page
 app.use('/', require("./routes/root"));
-
-
-
 
 // Not Found Or 404 error Page
 app.all('*', (req, res) => {
