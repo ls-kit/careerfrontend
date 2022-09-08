@@ -1,2 +1,19 @@
 20220909	03:32:06	5c46fa27-d75c-4635-a0ca-120427e9a9cd	Error: Not allowed by CORS!	OPTIONS	/	https://www.google.com
 20220909	03:32:06	6e7b023d-8107-4d8d-bba8-3f7104279ee1	Error: Not allowed by CORS!	GET	/	https://www.google.com
+20220909	04:56:22	38359ebc-4bf6-4ef2-a8f5-d680251ebdba	MongoServerError: user is not allowed to do action [find] on [BANGLADESHCAREEROLYMPIAD.users]	GET	/api/users	undefined
+20220909	05:02:04	8ebb934b-af95-4043-9c37-468f119fa2b9	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	GET	/api/users	undefined
+20220909	05:02:07	f9bf55be-f69d-41c7-adef-aca9449c232a	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	GET	/api/users	undefined
+20220909	05:02:08	8f5d19be-eef8-436a-bbd0-45cb59236be5	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	GET	/api/users	undefined
+20220909	05:02:09	392e8f28-ed72-4d70-a7f8-8e007d43d7ba	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	GET	/api/users	undefined
+20220909	05:02:57	fca95b5d-e5ac-4dc7-ba49-7149d3e82f75	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:02:59	2b992a44-9d63-4b1f-8bfd-f8bf6f387a35	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:03:01	acd32645-2ea2-4936-a607-81870d2cce23	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:03:02	3362d4e4-61a0-46e5-a157-402e5753dc91	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:03:04	627aa42a-e0b9-4e3e-bf95-6964afa8b6df	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:04:18	b19771ba-b9b6-4211-a2fd-af5611eff452	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:04:20	46106f2d-0300-4a3f-b35e-a6b1cd3b9194	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:05:48	cd0c3ecf-1053-48eb-977d-73486bf973b9	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:05:58	148b14d7-4459-4762-bb58-cbf18f2cafa8	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:06:16	972a28c9-377d-4bce-8e36-bb5964699a40	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:14:49	cced38ee-36b0-48d3-861d-68099309274d	MongoServerError: user is not allowed to do action [find] on [test.users]	POST	/api/users	undefined
+20220909	05:14:51	ffa92b98-4902-4e77-881d-5e29aaf1bed8	MongoServerError: user is not allowed to do action [find] on [test.users]	POST	/api/users	undefined
