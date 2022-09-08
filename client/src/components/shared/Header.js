@@ -75,9 +75,10 @@ const Header = () => {
                 </ul>
               </div>
               <div>
+                <Link to="/register">
                 <button className="bg-red-600 py-2 px-4 font-medium text-sm text-white rounded-sm">
                   Registration
-                </button>
+                </button></Link>
                 <button className="bg-green-500 py-2 px-4 font-medium text-white text-sm rounded-sm ml-3">
                   Login
                 </button>
