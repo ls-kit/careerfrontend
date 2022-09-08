@@ -258,7 +258,7 @@ function RegistrationForm() {
     <div style={registerbg} className="py-12">
       <div className="container bg-white rounded-3xl shadow-sm shadow-slate-900 mx-3 sm:mx-auto   py-12">
         <div className="login-form w-11/12 md:w-6/12 m-auto text-center">
-          <img src={LogoLarge} className="w-40 m-auto" />
+          <img src={LogoLarge} className="w-40 m-auto" alt="Logo Img" />
           <div className="text-green-800">User Registration</div>
           {isSubmitted ? <div className=" text-green-800 text-3xl py-5"> Registration successfully </div> : renderForm}
         </div>
