@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-import { AiOutlineTwitter } from "react-icons/ai";
+import { AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai";
 import advisor from "../../assets/HomBackgroun/advisor-backgroud.png"
 
 

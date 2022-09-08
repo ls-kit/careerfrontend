@@ -28,6 +28,20 @@ function CourseSlider() {
         slidesToScroll: 1,
         nextArrow: <BsFillArrowRightCircleFill/>,
         prevArrow: <BsFillArrowLeftCircleFill/>,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1,
+            }
+          },
+        ]
     };
     
     return (

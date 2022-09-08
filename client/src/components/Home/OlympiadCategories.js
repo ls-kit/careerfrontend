@@ -32,7 +32,7 @@ function OlympiadCategories() {
           <span className="dotted"></span>
         </h2>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 ">
         {olympiad &&
           olympiad.map((olympiad) => (
             <VisibilitySensor>
