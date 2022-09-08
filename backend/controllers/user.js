@@ -67,19 +67,19 @@ const updateUser = asyncHandler(async (req, res) => {
 // @access Private
 const deleteUser = asyncHandler(async (req, res) => {
     const { id } = req.body;
-    if (id) {
+    if (!id) {
         return res.status(400).json({
             message: "User ID required!"
         })
     }
-    const user = await User.findByIdAndDelete({ _id: id });
+    const user = await User.findByIdAndDelete({ _id: id }).select("-password");
     if (!user) {
         return res.status(400).json({
             message: "User not found!"
         })
     }
     res.status(200).json({
-        data: user.select('-password').lean(),
+        data: user,
         message: "User deleted!"
     })
 })
