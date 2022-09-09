@@ -46,7 +46,7 @@ function AboutSec({details, GrayText})
 {
     const TextGet = GrayText;
     let style;
-    if(TextGet == null) {
+    if(TextGet === null) {
         style = {
             display: 'none',
         };

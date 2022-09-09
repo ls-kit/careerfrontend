@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import ReactDOM from "react-dom";
 import LogoLarge from "../../assets/Logo-Large.png";
 import about from "../../assets/HomBackgroun/about-secton.png";
-import { stringify } from "postcss";
-
+// import { useAddNewUserMutation } from "../../features/api/apiSlice";
 function RegistrationForm() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
@@ -23,6 +21,8 @@ function RegistrationForm() {
 
   //fetch  upzila from local file
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    // const [] = useAddNewUserMutation()
     async function fetchDivision() {
       const response = await fetch("/Upzila.json");
       const data = await response.json();
@@ -36,7 +36,7 @@ function RegistrationForm() {
       const data = await response.json();
       const district = await data[1].districts;
       const filterDistrict = district.filter(
-        (d) => d.division_id == DivisionId
+        (d) => d.division_id === DivisionId
       );
       setAllDistrict(filterDistrict);
     }
@@ -47,7 +47,7 @@ function RegistrationForm() {
       const response = await fetch("/Upzila.json");
       const data = await response.json();
       const upazila = await data[2].upazilas;
-      const filterUpazila = upazila.filter((u) => u.district_id == DistrictId);
+      const filterUpazila = upazila.filter((u) => u.district_id === DistrictId);
       setAllUpazila(filterUpazila);
     }
     fetchDistrict();
@@ -70,11 +70,11 @@ function RegistrationForm() {
   };
   const handleUpazila = (e) => {
     const selectUpazila = e.target.value.split(",");
-
     const upazilaId = selectUpazila[0];
     const UpazilaName = selectUpazila[1];
     setUpazilaName(UpazilaName);
   };
+
   const handleLevel = (e) => {
     setEduLevel(e.target.value);
   };
@@ -102,17 +102,18 @@ function RegistrationForm() {
 
     for (let key in finalRegistartionInfo) {
       let keyValue = finalRegistartionInfo[key];
-      if (keyValue == "") {
+      if (keyValue === "") {
         seterr(`Enter a valid ${key}`);
         return;
       }
       else {
         seterr("");
+        console.log(finalRegistartionInfo)
       }
 
       // console.log(keyValue)
     }
-    
+
 
     console.log(finalRegistartionInfo);
     setIsSubmitted(true)
