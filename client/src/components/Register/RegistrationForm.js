@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import LogoLarge from "../../assets/Logo-Large.png";
 import about from "../../assets/HomBackgroun/about-secton.png";
-// import { useAddNewUserMutation } from "../../features/api/apiSlice";
+import { useAddNewUserMutation } from "../../features/api/apiSlice";
+import { useNavigate } from 'react-router-dom';
+
 function RegistrationForm() {
+  const navigate = useNavigate();
+  const [addNewUser, { data: user, isLoading, isError, error }] = useAddNewUserMutation()
   // React States
-  const [errorMessages, setErrorMessages] = useState({});
+  // const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [allDivision, setAllDivision] = useState([]);
   const [allDistrict, setAllDistrict] = useState([]);
@@ -21,8 +25,6 @@ function RegistrationForm() {
 
   //fetch  upzila from local file
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    // const [] = useAddNewUserMutation()
     async function fetchDivision() {
       const response = await fetch("/Upzila.json");
       const data = await response.json();
@@ -88,10 +90,8 @@ function RegistrationForm() {
     setUserInfo(newInformaiton);
   };
 
-  const handleSubmit = (event) => {
-    //Prevent page reload
-    event.preventDefault();
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const finalRegistartionInfo = {
       ...userInfo,
       division: DivisionName,
@@ -105,20 +105,27 @@ function RegistrationForm() {
       if (keyValue === "") {
         seterr(`Enter a valid ${key}`);
         return;
+      } else {
+        addNewUser({
+          ...finalRegistartionInfo, roles: ["Participant"],
+        })
+        if (user.status === 201) {
+          setIsSubmitted(true);
+        }
       }
-      else {
-        seterr("");
-        console.log(finalRegistartionInfo)
-      }
-
-      // console.log(keyValue)
     }
-
-
-    console.log(finalRegistartionInfo);
-    setIsSubmitted(true)
   };
-
+  if (isError) {
+    console.log(error);
+  }
+  useEffect(() => {
+    if (isSubmitted === true) {
+      setTimeout(() => {
+        navigate("/login");
+        setIsSubmitted(false);
+      }, 2000)
+    }
+  }, [isSubmitted, navigate])
   // JSX code for login form
   const renderForm = (
     <div className="form">
@@ -126,7 +133,7 @@ function RegistrationForm() {
         <div>
           <input
             type="text"
-            name="full-name"
+            name="fullname"
             placeholder="Enter Your Full Name"
             required
             onChange={(e) => handelBlure(e)}
@@ -217,10 +224,19 @@ function RegistrationForm() {
             </select>
           </div>
         </div>
+        <div>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+            onChange={(e) => handelBlure(e)}
+            className="mt-5 px-3 py-1.5 bg-white border shadow-sm border-green-800 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+          />
+        </div>
         <div className="grid grid-cols-1  item-left  mt-4 gap-1">
           {/* error */}
           <div className="w-100 text-red-800 uppercase">{err ? err : ""}</div>
-
           <div className="w-100">
             <input
               id="link-checkbox"
@@ -240,8 +256,9 @@ function RegistrationForm() {
         </div>
         <div className="button-container">
           <button
+            disabled={isLoading}
             type="submit"
-            className="bg-green-700 hover:bg-green-900 px-8 text-sm rounded-md mt-5 py-2 d-block text-white"
+            className={`bg-green-700 hover:bg-green-900 px-8 text-sm rounded-md mt-5 py-2 d-block text-white ${isLoading && "bg-red-600"}`}
           >
             Register
           </button>
@@ -251,7 +268,6 @@ function RegistrationForm() {
   );
   const registerbg = {
     background: `url(${about})`,
-
     backgroundSize: "cover",
   };
 

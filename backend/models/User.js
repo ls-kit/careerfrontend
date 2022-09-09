@@ -19,7 +19,33 @@ const userSchema = new mongoose.Schema(
         active: {
             type: Boolean,
             default: true
-        }
+        },
+        details: {
+            fullname: {
+                type: String,
+                required: true
+            },
+            phone: {
+                type: Number,
+                required: true
+            },
+            division: {
+                type: String,
+                required: true
+            },
+            district: {
+                type: String,
+                required: true
+            },
+            upazila: {
+                type: String,
+                required: true
+            },
+            level: {
+                type: String,
+                required: true
+            },
+        },
     },
     {
         timestamps: true

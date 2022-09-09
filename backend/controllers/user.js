@@ -24,8 +24,9 @@ const getAllUsers = asyncHandler(async (req, res) => {
 // @route POST /users
 // @access Private
 const createNewUser = asyncHandler(async (req, res) => {
-    const { email, password, roles } = req.body
-    if (!email || !password || !Array.isArray(roles) || !roles.length) {
+    const { email, password, roles, fullname, phone, division, district, upazila, level } = req.body;
+    if (!email || !password || !Array.isArray(roles) || !roles.length ||
+        !fullname || !phone || !division || !district || !upazila || !level) {
         return res.status(400).json({
             message: "All fields are required!"
         })
@@ -36,7 +37,19 @@ const createNewUser = asyncHandler(async (req, res) => {
         return res.status(409).json({ message: "User alredy registerd!" });
     };
     const hashedPassword = await bcrypt.hash(password, 12) // Salt Rounds
-    const userObject = { email, "password": hashedPassword, roles };
+    const userObject = {
+        email,
+        "password": hashedPassword,
+        roles,
+        details: {
+            fullname,
+            phone,
+            division,
+            district,
+            upazila,
+            level
+        }
+    };
 
     // Create And Store new user
     const user = await User.create(userObject);
