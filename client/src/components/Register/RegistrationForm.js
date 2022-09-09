@@ -4,10 +4,11 @@ import LogoLarge from "../../assets/Logo-Large.png";
 import about from "../../assets/HomBackgroun/about-secton.png";
 import { useAddNewUserMutation } from "../../features/api/apiSlice";
 import { useNavigate } from 'react-router-dom';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 function RegistrationForm() {
   const navigate = useNavigate();
-  const [addNewUser, { data: user, isLoading, isError, error }] = useAddNewUserMutation()
+  const [addNewUser, { isSuccess, data: user, isLoading, isError, error }] = useAddNewUserMutation()
   // React States
   // const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -109,15 +110,14 @@ function RegistrationForm() {
         addNewUser({
           ...finalRegistartionInfo, roles: ["Participant"],
         })
-        if (user.status === 201) {
-          setIsSubmitted(true);
+        if (isSuccess) {
+          if (user.status === 201) {
+            setIsSubmitted(true);
+          }
         }
       }
     }
   };
-  if (isError) {
-    console.log(error);
-  }
   useEffect(() => {
     if (isSubmitted === true) {
       setTimeout(() => {
@@ -236,7 +236,7 @@ function RegistrationForm() {
         </div>
         <div className="grid grid-cols-1  item-left  mt-4 gap-1">
           {/* error */}
-          <div className="w-100 text-red-800 uppercase">{err ? err : ""}</div>
+          {isError && <div className="w-100 text-red-800 uppercase">{error?.data?.message}</div>}
           <div className="w-100">
             <input
               id="link-checkbox"
@@ -260,7 +260,7 @@ function RegistrationForm() {
             type="submit"
             className={`bg-green-700 hover:bg-green-900 px-8 text-sm rounded-md mt-5 py-2 d-block text-white ${isLoading && "bg-red-600"}`}
           >
-            Register
+            {isLoading && <AiOutlineLoading3Quarters />} Register
           </button>
         </div>
       </form>

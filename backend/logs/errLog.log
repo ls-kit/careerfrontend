@@ -22,3 +22,4 @@
 20220910	01:40:45	3cebf22d-5ee2-4a52-b75a-d7ee8e177f3e	ReferenceError: upaxila is not defined	POST	/api/users	undefined
 20220910	01:45:48	43204098-7207-4ad4-9386-ed552dff8ae4	ValidationError: User validation failed: details.email: Path `details.email` is required.	POST	/api/users	undefined
 20220910	01:47:06	a2fb4996-9092-4f89-8b02-610f2a60c5eb	ValidationError: User validation failed: details.email: Path `details.email` is required.	POST	/api/users	undefined
+20220910	02:23:01	6d2f340d-9cef-498a-b877-987ca1f14ce7	Error: Not allowed by CORS!	OPTIONS	/api/users	https://career-olympiad-bangladesh.netlify.app
