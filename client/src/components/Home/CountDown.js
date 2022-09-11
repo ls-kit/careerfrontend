@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const CountDown = () => {
   var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
@@ -22,24 +23,24 @@ const CountDown = () => {
     {
       id: 1,
       time: days,
-      name: "Days"
+      name: "Days",
     },
     {
       id: 2,
       time: hours,
-      name: "Hours"
+      name: "Hours",
     },
     {
       id: 3,
       time: minutes,
-      name: "Minutes"
+      name: "Minutes",
     },
     {
       id: 4,
       time: seconds,
-      name: "Seconds"
-    }
-  ]
+      name: "Seconds",
+    },
+  ];
   return (
     <div>
       <div>
@@ -65,9 +66,11 @@ const CountDown = () => {
                 ))}
               </div>
               <div className="ml-6">
-                <button className="bg-green-700 border-2 border-green-800 text-md font-medium w-full h-12 block shadow-md rounded-md text-white uppercase">
-                  Registration Now
-                </button>
+                <Link to="/register">
+                  <button className="bg-green-700 border-2 border-green-800 text-md font-medium w-full h-12 block shadow-md rounded-md text-white uppercase">
+                    Registration Now
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
