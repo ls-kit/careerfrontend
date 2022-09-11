@@ -182,3 +182,9 @@
 20220910	02:36:40	459c0a1c-740c-4e39-bde2-a0d25ff26ee3	POST	/api/users	https://career-olympiad-bangladesh.netlify.app
 20220910	02:36:41	570c1b0d-16f9-4f0a-a402-60ab62173193	POST	/api/users	https://career-olympiad-bangladesh.netlify.app
 20220910	02:36:41	2fd4d9eb-9802-405b-bd12-6c6dd65c2ab8	POST	/api/users	https://career-olympiad-bangladesh.netlify.app
+20220911	21:17:44	dfe7427c-4482-4ed5-8748-e980daf019e8	OPTIONS	/api/users	http://localhost:3000
+20220911	21:17:44	865e69cd-abff-4fb8-a87e-a00319d1b6a5	POST	/api/users	http://localhost:3000
+20220911	21:17:51	727edbb2-186b-4836-be54-f0ff29cc14dc	OPTIONS	/api/users	http://localhost:3000
+20220911	21:17:51	63e6a116-08e0-468c-b3bb-c7e5de00b4be	POST	/api/users	http://localhost:3000
+20220911	21:19:37	0d9e9489-9445-4afe-9481-a5e4c8cab6cc	POST	/api/users	undefined
+20220911	21:19:42	adff1861-1ce2-4f0a-bcf1-b4074d741e8d	GET	/api/users	undefined
