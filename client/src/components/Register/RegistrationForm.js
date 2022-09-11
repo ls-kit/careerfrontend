@@ -106,17 +106,18 @@ function RegistrationForm() {
       if (keyValue === "") {
         seterr(`Enter a valid ${key}`);
         return;
-      } else {
-        addNewUser({
-          ...finalRegistartionInfo, roles: ["Participant"],
-        })
-        if (isSuccess) {
-          if (user.status === 201) {
-            setIsSubmitted(true);
-          }
-        }
-      }
+      } 
     }
+    seterr("")
+     addNewUser({
+       ...finalRegistartionInfo,
+       roles: ["Participant"],
+     });
+     if (isSuccess) {
+       if (user.status === 201) {
+         setIsSubmitted(true);
+       }
+     }
   };
   useEffect(() => {
     if (isSubmitted === true) {
