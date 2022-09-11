@@ -23,27 +23,39 @@ const Organizer = () => {
           <div className="lg:hidden ">
             <img src={largeLogo} alt="" />
             <div className="name text-center ">
-              <h2 className="text-4xl font-sans font-semibold text-red-500 uppercase ">Central Comitee</h2>
+              <h2 className="text-4xl font-sans font-semibold text-red-500 uppercase ">
+                Central Comitee
+              </h2>
             </div>
           </div>
           <div>
             <img src={CEO} alt="" />
             <div className="name text-center ">
-              <h2 className="text-[24px] font-sans font-semibold text-green-700">Gazi Mizanur Rahman</h2>
-              <p className="text-[18px] text-slate-500 font-sans">Founder & CEO</p>
+              <h2 className="text-[24px] font-sans font-semibold text-green-700">
+                Gazi Mizanur Rahman
+              </h2>
+              <p className="text-[18px] text-slate-500 font-sans">
+                Founder & CEO
+              </p>
             </div>
           </div>
           <div className=" hidden lg:block">
             <img src={largeLogo} alt="" />
             <div className="name text-center ">
-              <h2 className="text-4xl font-sans font-semibold text-red-500 uppercase ">Central Comitee</h2>
+              <h2 className="text-4xl font-sans font-semibold text-red-500 uppercase ">
+                Central Comitee
+              </h2>
             </div>
           </div>
           <div>
             <img src={Director} alt="" />
             <div className="name text-center ">
-              <h2 className="text-[24px] font-sans font-semibold text-green-700">Shakill Al-Amin</h2>
-              <p className="text-[18px] text-slate-500 font-sans">Director General</p>
+              <h2 className="text-[24px] font-sans font-semibold text-green-700">
+                Shakill Al-Amin
+              </h2>
+              <p className="text-[18px] text-slate-500 font-sans">
+                Director General
+              </p>
             </div>
           </div>
         </div>
@@ -56,8 +68,12 @@ const Organizer = () => {
               <div>
                 <img src={member.img} alt="" />
                 <div className="name text-center ">
-                  <h2 className="text-[24px] font-sans font-semibold text-green-700">{member.name}</h2>
-                  <p className="text-[18px] text-slate-500 font-sans">{member.role}</p>
+                  <h2 className="text-[24px] font-sans font-semibold text-green-700">
+                    {member.name}
+                  </h2>
+                  <p className="text-[18px] text-slate-500 font-sans">
+                    {member.role}
+                  </p>
                 </div>
               </div>
             </div>
@@ -66,30 +82,56 @@ const Organizer = () => {
 
         {/* partners */}
         <section>
-          <h2 className="text-4xl font-sans font-semibold text-center text-red-500">Our Partners</h2>
+          <h2 className="text-4xl font-sans font-semibold text-center text-red-500">
+            Our Partners
+          </h2>
           <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 lg:my-16 gap-8">
-            <div style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }} className="rounded-md">
+            <div
+              style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }}
+              className="rounded-md"
+            >
               <img src={largeLogo} alt="" />
             </div>
-            <div style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }} className="rounded-md">
+            <div
+              style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }}
+              className="rounded-md"
+            >
               <img src={largeLogo} alt="" />
             </div>
-            <div style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }} className="rounded-md">
+            <div
+              style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }}
+              className="rounded-md"
+            >
               <img src={largeLogo} alt="" />
             </div>
-            <div style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }} className="rounded-md">
+            <div
+              style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }}
+              className="rounded-md"
+            >
               <img src={largeLogo} alt="" />
             </div>
-            <div style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }} className="rounded-md">
+            <div
+              style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }}
+              className="rounded-md"
+            >
               <img src={largeLogo} alt="" />
             </div>
-            <div style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }} className="rounded-md">
+            <div
+              style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }}
+              className="rounded-md"
+            >
               <img src={largeLogo} alt="" />
             </div>
-            <div style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }} className="rounded-md">
+            <div
+              style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }}
+              className="rounded-md"
+            >
               <img src={largeLogo} alt="" />
             </div>
-            <div style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }} className="rounded-md">
+            <div
+              style={{ boxShadow: " inset -3px -3px 10px rgba(0,0,0,0.2)" }}
+              className="rounded-md"
+            >
               <img src={largeLogo} alt="" />
             </div>
           </div>
