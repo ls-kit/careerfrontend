@@ -226,13 +226,13 @@ function RegistrationForm() {
               type="checkbox"
               value=""
               required
-              className="w-4 h-auto text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              className="w-4 h-auto  text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             />
             <label
               for="link-checkbox"
               className="ml-2 text-sm dark:text-gray-300"
             >
-              I agree to the{" "}
+              I agree to the
               <span className="text-blue-400">Terms & Conditions</span>
             </label>
           </div>

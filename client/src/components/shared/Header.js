@@ -114,8 +114,9 @@ const Header = () => {
               </button>
             </div>
             <ul>
-              {menus.map((menu) => (
+              {menus.map((menu,index) => (
                 <li
+                  key={index}
                   onClick={() => setShowMenu(!showMenu)}
                   className="mt-2 text-lg "
                 >

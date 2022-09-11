@@ -29,7 +29,7 @@ const Footer = () => {
                             <div className='col-span-2 pl-4'>
                                 <h2 className='text-2xl font-medium text-white'>Quick Links</h2>
                                 <ul className='sm:mt-3'>
-                                    {menus.map(menu => <li className='font-medium pl-3'>{menu.link}</li>)}
+                                    {menus.map((menu,index) => <li key={index} className='font-medium pl-3'>{menu.link}</li>)}
                                 </ul>
                             </div>
                         </div>
