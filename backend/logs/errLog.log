@@ -23,3 +23,8 @@
 20220910	01:45:48	43204098-7207-4ad4-9386-ed552dff8ae4	ValidationError: User validation failed: details.email: Path `details.email` is required.	POST	/api/users	undefined
 20220910	01:47:06	a2fb4996-9092-4f89-8b02-610f2a60c5eb	ValidationError: User validation failed: details.email: Path `details.email` is required.	POST	/api/users	undefined
 20220910	02:23:01	6d2f340d-9cef-498a-b877-987ca1f14ce7	Error: Not allowed by CORS!	OPTIONS	/api/users	https://career-olympiad-bangladesh.netlify.app
+20220911	23:15:29	80b0d4db-a432-4ecb-b18c-f0303e140da6	ValidationError: User validation failed: details.phone: Cast to Number failed for value "sdfsd" (type string) at path "details.phone"	POST	/api/users	http://localhost:3000
+20220911	23:16:03	145402ed-00b7-49a6-aa2c-5c33b4dccb3f	ValidationError: User validation failed: details.phone: Cast to Number failed for value "sdfsd" (type string) at path "details.phone"	POST	/api/users	http://localhost:3000
+20220911	23:16:06	239e6123-6149-48a5-8236-5c52f9e08593	ValidationError: User validation failed: details.phone: Cast to Number failed for value "sdfsd" (type string) at path "details.phone"	POST	/api/users	http://localhost:3000
+20220911	23:16:14	0976d65a-7799-4ad9-ab62-ad61ec21ef05	ValidationError: User validation failed: details.phone: Cast to Number failed for value "sdfsd" (type string) at path "details.phone"	POST	/api/users	http://localhost:3000
+20220911	23:16:40	98078329-50c5-4e1c-b56e-4a18fc047d06	ValidationError: User validation failed: details.phone: Cast to Number failed for value "sdfsd" (type string) at path "details.phone"	POST	/api/users	http://localhost:3000

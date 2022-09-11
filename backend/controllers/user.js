@@ -32,7 +32,7 @@ const createNewUser = asyncHandler(async (req, res) => {
         })
     }
     // Check for existing
-    const existing = await User.findOne({ email }).lean().exec();
+    const existing = await User.findOne({ email }).lean();
     if (existing) {
         return res.status(409).json({ message: "User alredy registerd!" });
     };
@@ -55,6 +55,7 @@ const createNewUser = asyncHandler(async (req, res) => {
     const user = await User.create(userObject);
     if (user) { // Created
         res.status(201).json({
+            status: 201,
             message: `${email} registration done!`
         })
     } else {

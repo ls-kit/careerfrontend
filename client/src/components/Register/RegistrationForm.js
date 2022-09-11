@@ -91,7 +91,7 @@ function RegistrationForm() {
     setUserInfo(newInformaiton);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const finalRegistartionInfo = {
       ...userInfo,
@@ -106,18 +106,21 @@ function RegistrationForm() {
       if (keyValue === "") {
         seterr(`Enter a valid ${key}`);
         return;
-      } 
+      }
     }
     seterr("")
-     addNewUser({
-       ...finalRegistartionInfo,
-       roles: ["Participant"],
-     });
-     if (isSuccess) {
-       if (user.status === 201) {
-         setIsSubmitted(true);
-       }
-     }
+    await addNewUser({
+      ...finalRegistartionInfo,
+      roles: ["Participant"],
+    });
+    console.log(isLoading)
+    if (isSuccess) {
+      if (user.status === 201) {
+        console.log(isLoading)
+        await setIsSubmitted(true);
+      }
+    }
+    console.log(user, " = ", isSubmitted, isSuccess);
   };
   useEffect(() => {
     if (isSubmitted === true) {
