@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Registation from "./pages/Registation";
 import Organizer from "./pages/Organizer";
+import NewsMedia from "./pages/NewsMedia";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="organizer" element={<Organizer />} />
         <Route path="login" element={<Login />} />
         <Route path="about-BCO" element={<AboutBco />} />
+        <Route path="news-media" element={<NewsMedia />} />
         <Route path="register" element={<Registation />} />
       </Routes>
     </BrowserRouter>

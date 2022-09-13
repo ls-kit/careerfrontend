@@ -4,7 +4,7 @@ import Header from '../components/shared/Header';
 import TopHeader from '../components/shared/TopHeader';
 import CountDown from "../components/Home/CountDown";
 import AboutSection from '../components/AboutBco/AboutSection';
-import OurPartner from '../components/AboutBco/OurPartner';
+import OurPartner from '../components/shared/OurPartner';
 
 const AboutBco = () => {
     return (
