@@ -1,6 +1,6 @@
 import React from "react";
 import VisibilitySensor from "react-visibility-sensor";
-
+import olympiadRoundBg from "../../assets/HomBackgroun/olympiad-round-bg.png";
 
 function OlympiadRound() {
   const olympiad = [
@@ -26,24 +26,33 @@ function OlympiadRound() {
     },
   ];
   
+  const SectionBg = {
+    backgroundImage: `url(${olympiadRoundBg})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center'
+  }
+
   return (
-    <div className="container mx-auto px-3 pt-8 mb-24">
-      <div className="text-center">
-        <h2 className="text-3xl font-medium flex-auto my-5 text-red-700 text-emerald-800 mb-16">
-          Olympiad Round
-        </h2>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-        {olympiad &&
-          olympiad.map((olympiad) => (
-            <VisibilitySensor>
-              <OlympiadCard 
-                serialNo={olympiad.SerialNo}
-                name={olympiad.Name}
-                details={olympiad.Details}
-              />
-            </VisibilitySensor>
-          ))}
+    <div style={SectionBg} className="mt-28 mb-10 pb-24">
+      <div className="container mx-auto px-3">
+        <div className="text-center">
+          <h2 className="text-3xl font-medium flex-auto my-5 text-red-700 text-emerald-800 mb-16">
+            Olympiad Round
+          </h2>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {olympiad &&
+            olympiad.map((olympiad) => (
+              <VisibilitySensor>
+                <OlympiadCard 
+                  serialNo={olympiad.SerialNo}
+                  name={olympiad.Name}
+                  details={olympiad.Details}
+                />
+              </VisibilitySensor>
+            ))}
+        </div>
       </div>
     </div>
   );
