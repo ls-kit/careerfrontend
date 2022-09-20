@@ -38,8 +38,8 @@ export const Members = [
   },
   {
     id: 6,
-    name: "Gazi Mizanur Rahman",
-    role: "Founder & CEO",
+    name: "Sajedul Islam Rabby",
+    role: "Director",
     img: imag8,
   },
 ];
