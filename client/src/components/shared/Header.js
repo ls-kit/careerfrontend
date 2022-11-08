@@ -76,6 +76,14 @@ const menus = [
       </Link>
     ),
   },
+  {
+    id: 10,
+    link: (
+      <Link className="text-white text-sm" to="/our-teams">
+        Our Teams
+      </Link>
+    ),
+  },
 ];
 const Header = () => {
   const [stickyMenu, setStickyMenu] = useState(false);
@@ -95,9 +103,8 @@ const Header = () => {
     <div>
       {/* Big Screen */}
       <div
-        className={`z-50 hidden lg:block bg-black py-2 ${
-          stickyMenu ? "fixed w-full top-0 transition-all duration-500" : ""
-        }`}
+        className={`z-50 hidden lg:block bg-black py-2 ${stickyMenu ? "fixed w-full top-0 transition-all duration-500" : ""
+          }`}
       >
         <div className="container mx-auto">
           <div className="flex items-center justify-between">
@@ -139,11 +146,10 @@ const Header = () => {
       </div>
       {/* Responsive Screen */}
       <div
-        className={`lg:hidden fixed top-0 z-50 ${
-          showMenu
-            ? "left-0 transition-all ease-linear duration-300"
-            : "-left-full transition-all ease-linear duration-300"
-        }`}
+        className={`lg:hidden fixed top-0 z-50 ${showMenu
+          ? "left-0 transition-all ease-linear duration-300"
+          : "-left-full transition-all ease-linear duration-300"
+          }`}
       >
         <div className=" px-4 pt-8 w-[300px] top-0 h-screen bg-black">
           <div className="flex items-center justify-end">

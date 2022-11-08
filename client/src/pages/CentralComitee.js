@@ -62,7 +62,7 @@ const CentralComitee = () => {
 
         {/* mapping  */}
 
-        <div class="grid lg:grid-cols-3 sm:grid-cols-1 lg:my-32 space-y-3 gap-8">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-1 lg:my-32 space-y-3 gap-8">
           {Members.map((member) => (
             <div key={member.id}>
               <div>
