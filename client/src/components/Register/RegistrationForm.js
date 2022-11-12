@@ -141,8 +141,9 @@ function RegistrationForm() {
         draggable: true,
         progress: undefined,
       });
+
       setTimeout(() => {
-        navigate("/login");
+        window.location.replace("http://localhost:8080/dashboard");
       }, 3000);
     }
   }, [isSuccess, navigate, isError]);
