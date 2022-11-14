@@ -27,7 +27,7 @@ const App = () => {
         <Route path='our-teams' element={<OurTeams />} />
         <Route path={`our-teams/:teamType`} element={<TeamList />} />
         <Route path={`our-teams/upazila/:teamName`} element={<TeamMembers />} />
-        <Route path={`/our-teams/districts/:teamName`} element={<TeamMembers />} />
+        <Route path={`/our-teams/district/:teamName`} element={<TeamMembers />} />
         <Route path={`our-teams/university/:teamType`} element={<TeamList />} />
         <Route path={`/our-teams/university/public/:teamName`} element={<TeamMembers />} />
         <Route path={`/our-teams/university/7college/:teamName`} element={<TeamMembers />} />

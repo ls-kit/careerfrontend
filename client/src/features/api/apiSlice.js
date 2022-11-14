@@ -20,7 +20,10 @@ export const apiSlice = createApi({
         body: data,
       }),
     }),
+    getAllTeamList: builder.query({
+      query: (type) => `/${type}/all`,
+    }),
   }),
 });
 
-export const { useAddNewUserMutation, useUserLoginMutation } = apiSlice;
+export const { useAddNewUserMutation, useUserLoginMutation, useGetAllTeamListQuery } = apiSlice;

@@ -5,9 +5,13 @@ import Footer from "../components/shared/Footer";
 import Header from "../components/shared/Header";
 import HeaderShapeTitle from "../components/shared/HeaderShapeTitle";
 import TopHeader from "../components/shared/TopHeader";
+import { useGetAllTeamListQuery } from "../features/api/apiSlice";
 
 const TeamList = () => {
   const { teamType } = useParams();
+  const { isError, isLoading, isSuccess, error, data: teamlist } = useGetAllTeamListQuery(teamType);
+
+  console.log("teamlist", teamlist);
 
   let headTitle = teamType;
   if (teamType == "public") {
@@ -18,6 +22,7 @@ const TeamList = () => {
   }
 
   console.log("teamType", teamType);
+
   const districtList = [
     "Dinajpur",
     "Rangpur",
@@ -73,22 +78,42 @@ const TeamList = () => {
    ***** Decide what is render for dynamic team
    */
   let team = "";
+
+  if (isLoading) {
+    team = <ListItem item='Loading...' />;
+  }
+
+  if (!isLoading && isError) {
+    team = <h3 className='text-center text-red-700 pt-10'>Something went wrong!</h3>;
+  }
+
   //   district team
-  if (teamType === "districts") {
-    team = districtList.map((district) => (
-      <Link to={`${district}`} key={district}>
-        <ListItem item={district} />
-      </Link>
-    ));
+  if (teamType === "district") {
+    if (!isLoading && !isError && teamlist?.data.length == 0) {
+      team = <h3 className='text-center text-red-700 pt-10'>No data found!</h3>;
+    }
+
+    if (!isLoading && !isError && teamlist?.data.length > 0) {
+      team = teamlist?.data.map((district, index) => (
+        <Link to={`${district.name}`} key={index}>
+          <ListItem item={district.name} />
+        </Link>
+      ));
+    }
   }
 
   // upazila   team
   if (teamType === "upazila") {
-    team = thanaList.map((thana) => (
-      <Link to={`${thana}`} key={thana}>
-        <ListItem item={thana} />
-      </Link>
-    ));
+    if (!isLoading && !isError && teamlist?.data.length == 0) {
+      team = <h3 className='text-center text-red-700 pt-10'>No data found!</h3>;
+    }
+    if (!isLoading && !isError && teamlist?.data.length > 0) {
+      team = teamlist?.data.map((upazila, index) => (
+        <Link to={`${upazila.name}`} key={index}>
+          <ListItem item={upazila.name} />
+        </Link>
+      ));
+    }
   }
 
   // public versity   team

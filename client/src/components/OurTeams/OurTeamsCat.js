@@ -27,7 +27,7 @@ const OurTeamsCat = () => {
               <h2 className='border-2 border-red-500  px-6 py-4 font-medium uppercase '>Districts</h2>
             </div>
             <div className='flex flex-col justify-center md:flex-row '>
-              <Link to={`${"districts"}`}>
+              <Link to={`${"district"}`}>
                 <CategoryCard name={"Districts list"} css={"border-green-500"} />
               </Link>
               <Link to={`${"upazila"}`}>
