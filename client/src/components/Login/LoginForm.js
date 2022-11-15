@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 const LoginForm = () => {
   useEffect(() => {
-    window.location.replace("http://localhost:8080/dashboard");
+    window.location.replace("https://bco.up.railway.app/login");
   }, []);
 
   return (

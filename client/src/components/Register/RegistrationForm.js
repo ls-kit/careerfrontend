@@ -143,7 +143,7 @@ function RegistrationForm() {
       });
 
       setTimeout(() => {
-        window.location.replace("http://localhost:8080/dashboard");
+        window.location.replace("https://bco.up.railway.app/login");
       }, 3000);
     }
   }, [isSuccess, navigate, isError]);
